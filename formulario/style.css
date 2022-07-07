@@ -1,0 +1,13 @@
+label{
+    
+}
+form  {
+    display: flex;
+    flex-flow: column;
+}
+form > *{
+    padding: 5px;
+}
+.invalido,input[type="checkbox"].invalido + label{
+color: red;
+}
