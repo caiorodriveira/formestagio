@@ -45,7 +45,7 @@ const validar = (e) => {
         alert('Preencha o campo email!');
         email.focus();
         return
-    }if(!emailvalid(email.value)){
+    }else if(!emailvalid(email.value)){
         alert('Email invalido!');
         email.focus();
     }
