@@ -1,13 +1,83 @@
-label{
-    
+@charset "UTF-8";
+
+* {
+    font-family: arial;
+    padding: 0;
+    margin: 0;
 }
-form  {
-    display: flex;
-    flex-flow: column;
+
+form {
+    width: 80%;
 }
-form > *{
-    padding: 5px;
-}
-.invalido,input[type="checkbox"].invalido + label{
+
+/* .invalido,input[type="checkbox"].invalido + label{
 color: red;
+} */
+.tabela-cabecalho {
+    background-color: #114c6e;
+    color: white;
+    font-size: 25px;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+.campo {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form {
+    
+    padding: 40px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    padding-top: 10px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+button {
+    background-color: #50a2d1;
+    color: white;
+    border: 0px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 8px 18px;
+}
+
+button:hover {
+    background-color: #3785b3;
+}
+
+o {
+    color: red;
+}
+
+#recado {
+    padding-bottom: 10%;
+}
+
+.hist {
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px
+}
+
+img {
+    font-size: x-small;
+    max-width: 70%;
+    padding-right:0px;
 }

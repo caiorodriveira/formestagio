@@ -5,49 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula Ermogenes</title>
-    <script src="indexreal.js"></script>
+    <title>Formulário de Inscrição</title>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>FICHA DE INSCRIÇÃO</h1>
-    <p>Antes de efetuar a inscrição, conheça do <a href="https://github.com/kaiorod">criterios</a> 
-        do Processo Seletivo de Estágio - 01/2022, certificando-se de que terá de preencher todos 
-        os requisitos exigidos no momento da formalização do Termo de Compromisso de Estágio.</p>
-    <div>
+    <div class="tabela-cabecalho">
+        <table width="100%">
+            <td><img src="logonome-sv.png" alt="logo São vicente" class="img"></td>
+            <td>PROCESSO SELETIVO DE ESTÁGIO - 01/2022? </td>
+        </table>
+    </div>
+
+    <div class="form">
         <form>
-            <label for="nome">Nome Completo:</label>
-            <input type="text" nome="usuario" id="usuario">
+            <h1 style="padding-bottom: 25px;">FICHA DE INSCRIÇÃO</h1>
+            <p class="criterios" style="padding-bottom: 25px;">Antes de efetuar a inscrição, conheça do <a id="link"
+                    href="https://github.com/kaiorod">criterios</a>
+                do Processo Seletivo de Estágio - 01/2022, certificando-se de que terá de preencher todos
+                os requisitos exigidos no momento da formalização do Termo de Compromisso de Estágio.</p>
+            <label for="nome">Nome Completo:<o id="obrigatorio">*</o></label>
+            <input type="text" nome="usuario" id="usuario" class="campo" placeholder="Digite seu nome completo">
 
-            <label for="rg">RG:</label>
-            <input type="text" nome="rg" id="rg">
+            <label for="rg">RG:<o id="obrigatorio">*</o></label>
+            <input type="text" nome="rg" id="rg" class="campo" placeholder="00.000.000-X">
 
-            <label for="cpf">CPF:</label>
-            <input type="number" nome="cpf" id="cpf">
+            <label for="cpf">CPF:<o id="obrigatorio">*</o></label>
+            <input type="text" nome="cpf" id="cpf" class="campo" placeholder="000.000.000-00">
 
-            <label for="nasc">Data de Nascimento:</label>
-            <input type="date" nome="nasc" id="nasc">
+            <label for="nasc">Data de Nascimento:<o id="obrigatorio">*</o></label>
+            <input type="date" nome="nasc" id="nasc" class="campo">
 
-            <label for="email">Email:</label>
-            <input type="text" nome="email" id="email">
+            <label for="email">Email:<o id="obrigatorio">*</o></label>
+            <input type="text" nome="email" id="email" class="campo" placeholder="email@exemplo.com">
 
-            <label for="celular">Telefone celular:</label>
-            <input type="tel" nome="celular" id="celular">
+            <label for="celular">Telefone celular:<o id="obrigatorio">*</o></label>
+            <input type="tel" nome="celular" id="celular" class="campo" placeholder="(00) 00000-0000">
 
             <label for="recado">Telefone para recado:</label>
-            <input type="tel" nome="recado" id="recado">
+            <input type="tel" nome="recado" id="trecado" class="campo" placeholder="(00) 00000-0000">
 
-            <label for="curso">Curso:</label>
-            <select name="curso" id="curso">
+            <label for="curso">Curso:<o>*</o></label>
+            <select name="curso" id="curso" class="campo">
                 <option selected>--Selecione--</option>
             </select>
 
-            <label for="instituicao">Instituição de Ensino::</label>
-            <select name="curso" id="curso">
+            <label for="instituicao">Instituição de Ensino:<o>*</o></label>
+            <select name="curso" id="curso" class="campo">
                 <option selected>--Selecione--</option>
             </select>
-            <p>
+            <p class="hist">
                 Envie <u>seu histórico escolar do 2º semestre de 2021</u>,
                 nitidamente digitalizado, contendo código de autencidade
                 para verificação ou carimbo e assinatura da Instituição
@@ -55,40 +63,40 @@
             </p>
 
             <input type="file" name="arquivo"></input>
-            <p><b>Tipo:</b> .jpg, .png, .pdf; <b>Tamanho máximo: </b> 4MB</p>
+            <p style="padding-bottom:10px"><b>Tipo:</b> .jpg, .png, .pdf; <b>Tamanho máximo: </b> 4MB</p>
 
-            <label for="deficiencia">É pessoa com deficiência?</label>
-            <select name="curso" id="curso">
+            <label for="deficiencia">É pessoa com deficiência?<o>*</o></label>
+            <select name="curso" id="curso" class="campo">
                 <option selected>--Selecione--</option>
                 <option value="0">Sim</option>
                 <option value="1">Não</option>
             </select>
             <p></p>
             <label for="recado">Como ficou sabendo do Processo Seletivo de Estágio - 01/2022?</label>
-            <textarea nome="recado" id="recado"></textarea>
-    </div>
+            <textarea nome="recado" id="recado" class="campo"></textarea>
+            <h3 style="text-align: center; padding-top: 25px;">DECLARAÇÃO DE CIÊNCIA</h3>
+            <p style="text-align: justify;">
+                Declaro estar ciente de que: - a presente inscrição implica no meu conhecimento prévio
+                e na minha tácita e expressa aceitação das disposições contidas no edital deste processo
+                seletivo de estágio; - toda convocação será feita exclusivamente pelo email incdicado,
+                isentando a Prefeitura Municipal de São Vicente por e-mails retornados em função de caixa
+                cheia, endereço eletrônico desatualizado, não localizado, incorreto, desabilitado, mensagem
+                bloqueada pelo firewall ou antivírus; - é minha responsabilidade manter meu endereço eletrônico
+                atualizado para viabilizar os contatos necessários até que se expire o prazo de 2 (dois) dias
+                úteis após o recebimento do e-mail de convocação, não me apresentar para a entrega da documentação.
+            </p>
 
-    <div>
-        <h3>DECLARAÇÃO DE CIÊNCIA</h3>
-        <p>
-            Declaro estar ciente de que: - a presente inscrição implica no meu conhecimento prévio
-            e na minha tácita e expressa aceitação das disposições contidas no edital deste processo
-            seletivo de estágio; - toda convocação será feita exclusivamente pelo email incdicado, 
-            isentando a Prefeitura Municipal de São Vicente por e-mails retornados em função de caixa
-            cheia, endereço eletrônico desatualizado, não localizado, incorreto, desabilitado, mensagem 
-            bloqueada pelo firewall ou antivírus; - é minha responsabilidade manter meu endereço eletrônico
-            atualizado para viabilizar os contatos necessários até que se expire o prazo de 2 (dois) dias 
-            úteis após o recebimento do e-mail de convocação, não me apresentar para a entrega da documentação.
-        </p>
+            <p style="padding-top: 10px ">
+                <label for="acordo"><b>Confirmar:<o>*</o></b></label>
+                <input type="checkbox" nome="acordo" id="acordo">
+                <label for="acordo" style="font-size: 13px;">Estou ciente.</label>
+            </p>
 
-        <label for="acordo"><b>Confirmar:</b></label>
-        <input type="checkbox" nome="acordo" id="acordo">
-        <label for="acordo">Estou ciente.</label>
-        <p></p>
-        <h5>Confira as informações que digitou, evitando a desclassificação por dados incosistentes</h6>
+            <h5 style="padding: 35px 0px">Confira as informações que digitou, evitando a desclassificação por dados
+                incosistentes</h6>
+        </form>
+        <p style="text-align: center;"><button type="submit" id="enviar">Enviar</button></p>
     </div>
-    <button type="submit">Enviar</button>
-    </form>
 </body>
 
 </html>
