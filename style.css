@@ -10,14 +10,16 @@ form {
     width: 80%;
 }
 
-/* .invalido,input[type="checkbox"].invalido + label{
-color: red;
-} */
 .tabela-cabecalho {
     background-color: #114c6e;
     color: white;
-    font-size: 25px;
-
+    font-size: 130%;
+    
+}
+img {
+    font-size: x-small;
+    max-width: 80%;
+    padding-right:0px;
 }
 
 h1 {
@@ -62,7 +64,7 @@ button:hover {
     background-color: #3785b3;
 }
 
-o {
+span {
     color: red;
 }
 
@@ -76,8 +78,13 @@ o {
     padding-bottom: 10px
 }
 
-img {
-    font-size: x-small;
-    max-width: 70%;
-    padding-right:0px;
+p{
+    text-align: justify;
 }
+.arquivo-text{
+    padding-bottom:10px;
+    font-size: .8em;
+}
+.invalido{
+    color: red;
+    }

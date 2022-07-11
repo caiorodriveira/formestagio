@@ -22,53 +22,62 @@
         <form>
             <h1 style="padding-bottom: 25px;">FICHA DE INSCRIÇÃO</h1>
             <p class="criterios" style="padding-bottom: 25px;">
-                Antes de efetuar a inscrição, conheça do 
+                Antes de efetuar a inscrição, conheça do
                 <a id="link" href="https://github.com/kaiorod">
                     criterios
                 </a>
                 do Processo Seletivo de Estágio - 01/2022, certificando-se de que terá de preencher todos
-                os requisitos exigidos no momento da formalização do Termo de Compromisso de Estágio.</p>
-            <label for="nome">Nome Completo:<o>*</o></label>
+                os requisitos exigidos no momento da formalização do Termo de Compromisso de Estágio.
+            </p>
+            <label for="nome">Nome Completo:<span>*</span></label>
             <input type="text" nome="nome" id='nome' class="campo" placeholder="Digite seu nome completo">
 
-            <label for="rg">RG:<o>*</o></label>
+            <label for="rg">RG:<span>*</span></label>
             <input type="text" nome="rg" id="rg" class="campo" placeholder="00.000.000-X">
 
-            <label for="cpf">CPF:<o>*</o></label>
+            <label for="cpf">CPF:<span>*</span></label>
             <input type="text" nome="cpf" id="cpf" class="campo" placeholder="000.000.000-00">
 
-            <label for="nasc">Data de Nascimento:<o>*</o></label>
+            <label for="nasc">Data de Nascimento:<span>*</span></label>
             <input type="date" nome="nasc" id="nasc" class="campo">
 
-            <label for="email">Email:<o>*</o></label>
+            <label for="email">Email:<span>*</span></label>
             <input type="text" nome="email" id="email" class="campo" placeholder="email@exemplo.com">
 
-            <label for="celular">Telefone celular:<o>*</o></label>
-            <input type="tel" nome="celular" id="celular" class="campo" placeholder="(00) 00000-0000">
+            <label for="celular">Telefone celular:<span >*</span></label>
+            <input type="text" nome="celular" id="celular" class="campo" placeholder="(00) 00000-0000">
 
             <label for="recado">Telefone para recado:</label>
-            <input type="tel" nome="recado" id="trecado" class="campo" placeholder="(00) 00000-0000">
+            <input type="text" nome="recado" id="trecado" class="campo" placeholder="(00) 00000-0000">
 
-            <label for="curso">Curso:<o>*</o></label>
+            <label for="curso">Curso:<span>*</span></label>
             <select name="curso" id="curso" class="campo">
                 <option selected value="0">--Selecione--</option>
+                <option value="1">Engenharia Eletrônica</option>
+                <option value="2">Análise e Desenvolvimento de Sistemas</option>
+                <option value="2">Comércio Exterior</option>
             </select>
 
-            <label for="instituicao">Instituição de Ensino:<o>*</o></label>
+            <label for="instituicao">Instituição de Ensino:<span>*</span></label>
             <select name="instituicao" id="instituicao" class="campo">
                 <option selected value="0">--Selecione--</option>
+                <option value="1">FATEC Praia Grande (Praia Grande)</option>
+                <option value="2">UNESP São Vicente (São Vicente)</option>
+                <option value="3">FATEC Rubens Lara (Santos)</option>
             </select>
             <p class="hist">
                 Envie <u>seu histórico escolar do 2º semestre de 2021</u>,
                 nitidamente digitalizado, contendo código de autencidade
-                para verificação ou carimbo e assinatura da Instituição
+                para verificação ou carimbo e asinatura da Instituição
                 de Ensino:
             </p>
 
-            <input type="file" name="arquivo"></input>
-            <p style="padding-bottom:10px"><b>Tipo:</b> .jpg, .png, .pdf; <b>Tamanho máximo: </b> 4MB</p>
+            <input type="file" name="arquivo" id="arquivo" class="invalido"  onchange="return validacaoArquivo()"/>
 
-            <label for="deficiencia">É pessoa com deficiência?<o>*</o></label>
+            <p class="arquivo-text"><b>Tipo:</b> .jpg, .png, .pdf; <b>Tamanho máximo: </b> 4MB</p>
+            <div id="visualizarImagem"></div>
+
+            <label for="deficiencia">É pessoa com deficiência?<span>*</span></label>
             <select name="deficiencia" id="deficiencia" class="campo">
                 <option selected value="0"> --Selecione--</option>
                 <option value="1">Sim</option>
@@ -89,20 +98,20 @@
             </p>
 
             <p style="padding-top: 10px ">
-                <label for="declaracao"><b>Confirmar:<o>*</o></b></label>
+                <label for="declaracao"><b>Confirmar:<span>*</span></b></label>
                 <input type="checkbox" nome="declaracao" id="declaracao">
                 <label for="declaracao" style="font-size: 13px;">Estou ciente.</label>
             </p>
 
             <h5 style="padding: 35px 0px">Confira as informações que digitou, evitando a desclassificação por dados
                 incosistentes</h6>
-        </form>
-        <p style="text-align: center;">
-            <button type="submit" id="enviar">
-                Enviar
-            </button>
-        </p>
-    </div>
+            </div>
+            <p style="text-align: center;">
+                <button type="submit" id="enviar">
+                    Enviar
+                </button>
+            </p>
+    </form>
 </body>
 
 </html>
