@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 * {
-    font-family: arial;
+    font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -14,12 +14,13 @@ form {
     background-color: #114c6e;
     color: white;
     font-size: 130%;
-    
+
 }
+
 img {
     font-size: x-small;
     max-width: 80%;
-    padding-right:0px;
+    padding-right: 0px;
 }
 
 h1 {
@@ -37,7 +38,7 @@ h1 {
 }
 
 .form {
-    
+
     padding: 40px;
     padding-left: 50px;
     display: flex;
@@ -78,13 +79,19 @@ span {
     padding-bottom: 10px
 }
 
-p{
+p {
     text-align: justify;
 }
-.arquivo-text{
-    padding-bottom:10px;
+
+.arquivo-text {
+    padding-bottom: 10px;
     font-size: .8em;
 }
-.invalido{
+
+.invalido {
     color: red;
-    }
+}
+object{
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
